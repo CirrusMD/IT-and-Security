@@ -12,7 +12,7 @@
 
 3. **Run the App**
 
-   : Open your terminal or command prompt and navigate to the folder where the Python script is located. Run the following command:
+   Open your terminal or command prompt and navigate to the folder where the Python script is located. Run the following command:
 
    ```
    python access-review.py
