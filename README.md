@@ -31,3 +31,32 @@ python access-review.py
 ```
 
 
+
+## Files
+
+### `jcuserlist_<Date>.csv`
+
+- **_id, username, email, etc.**: Various identifiers and metadata for each user.
+- **account_locked, activated, suspended, state**: Columns that seem to indicate the status of the account.
+- **addresses, company, department, jobTitle, etc.**: Additional user details.
+
+### `users-to-user-groups-#########-<Date>Z.csv`
+
+- **username, email**: Identifiers for each user.
+- **user_group_name**: The name of the group the user belongs to.
+- **user_created_at, user_state, account_locked, password_expired, etc.**: Various metadata including the status of the account.
+
+### `users-to-sso-applications-#########-<Date>Z.csv`
+
+- **username, email**: Identifiers for each user.
+- **application_name**: The name of the application the user has access to.
+- **user_state, association_type, association_timestamp, last_login_timestamp**: Various metadata including the status of the application access.
+
+
+
+
+
+
+
+
+
