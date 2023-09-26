@@ -8,7 +8,7 @@
 
 1. **Download the App**: First, download the Python script you got from the link above.
 
-2. **Place the CSV Files**: Make sure to place the CSV files (`jcuserlist_20230925.csv`, `users-to-user-groups-6511da5f8d205ef0d9bcdbe7-20230925Z.csv`, `users-to-sso-applications-6511daca2624fcca7fea9f4c-20230925Z.csv`) in the same directory as the Python script or update the paths in the script accordingly.
+2. **Place the CSV Files**: Make sure to place the CSV files (`jcuserlist_<Date>.csv`, `users-to-user-groups-################-<Date>Z.csv`, `users-to-sso-applications-################-<Date>Z.csv`) in the same directory as the Python script or update the paths in the script accordingly.
 
 3. **Run the App**
 
