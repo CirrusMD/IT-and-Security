@@ -1,5 +1,7 @@
 # Access Review Analysis Python App
 
+**NOTE:** `modules` isn't in use, its just stuff I started with.
+
 ## Install
 
 `pip install pandas matplotlib seaborn`
