@@ -61,6 +61,22 @@ def main():
     doc.add_paragraph(f'High-Risk Combinations:')
     doc.add_paragraph(f'{high_risk_combinations.head()}')
 
+# Ask the user if they want to export additional CSV files
+export_csv_option = input("Do you want to export additional CSV files? (y/n): ")
+if export_csv_option.lower() == 'y':
+    # 1) List of users and the number of groups assigned, and another column that lists all the groups
+    user_group_count = user_groups_df.groupby('username')['user_group_name'].agg(['count', lambda x: ', '.join(x)]).reset_index()
+    user_group_count.columns = ['Username', 'Number_of_Groups', 'List_of_Groups']
+    user_group_count.to_csv('User_Group_Info.csv', index=False)
+    
+    # 2) List of Groups and the total number of users
+    group_user_count = user_groups_df.groupby('user_group_name')['username'].count().reset_index()
+    group_user_count.columns = ['Group_Name', 'Number_of_Users']
+    group_user_count.to_csv('Group_User_Info.csv', index=False)
+    
+    print("CSV files have been exported.")
+
+    
     # Save the document
     doc.save('Access_Review_Report.docx')
 
