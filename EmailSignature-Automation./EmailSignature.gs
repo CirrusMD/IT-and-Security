@@ -30,12 +30,16 @@ function updateUserSignature(userEmail, userName, userTitle) {
 
 function generateSignatureHtml(userName, userTitle) {
   var htmlTemplate = `
-<div>
-// ==============================
-// ==============================
-// EMAIL SIGNATURE HTML GOES HERE
-// ==============================
-// ==============================
+<div dir="ltr" style="font-family: Arial, sans-serif; font-size: 14px;">
+    <div dir="ltr">
+        <b><font color="#0b5394">{{name}}</font></b>
+        <div>
+            <font color="#0b5394">{{title}}</font><br>
+            <b><font color="#3d85c6">p:</font></b><font color="#0b5394"> {{phone}}</font><br>
+            <b><font color="#3d85c6">e:</font></b><font color="#0b5394"> <a href="mailto:{{email}}" target="_blank" style="text-decoration: none; color: #0b5394;">{{email}}</a></font><br>
+            <b><font color="#3d85c6">w:</font></b><font color="#0b5394"> <a href="http://cirrusmd.com" target="_blank" style="text-decoration: none; color: #0b5394;">cirrusmd.com</a></font><br>&nbsp;
+        </div>
+    </div>
 </div>`;
   return htmlTemplate.replace('{{name}}', userName).replace('{{title}}', userTitle);
 }
