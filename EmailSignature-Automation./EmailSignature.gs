@@ -30,8 +30,8 @@ function updateUserSignature(userEmail, userName, userTitle) {
 
 function generateSignatureHtml(userName, userTitle) {
   var htmlTemplate = `
-<div dir="ltr" style="font-family: Arial, sans-serif; font-size: 14px;">
-    <div dir="ltr">
+<div style="font-family: Arial, sans-serif; font-size: 14px;">
+    <div>
         <b><font color="#0b5394">{{name}}</font></b>
         <div>
             <font color="#0b5394">{{title}}</font><br>
