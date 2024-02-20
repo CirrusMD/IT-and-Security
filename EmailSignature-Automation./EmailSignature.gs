@@ -53,14 +53,15 @@ function updateUserSignature(userEmail, userName, userTitle) {
 
 function generateSignatureHtml(userName, userTitle) {
   var htmlTemplate = `
-<div style="font-family: Arial, sans-serif; font-size: 14px;">
+<div style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.4;">
+<div style="font-size: 20px;"><font color="#89D2DC">CirrusMD</font></div>
     <div>
-        <b><font color="#0b5394">{{name}}</font></b>
+      <b><font color="#17479D">{{name}}</b> <font color="#f7a072">&#124;</font> {{pronouns}}</font>
         <div>
-            <font color="#0b5394">{{title}}</font><br>
-            <b><font color="#3d85c6">p:</font></b><font color="#0b5394"> {{phone}}</font><br>
-            <b><font color="#3d85c6">e:</font></b><font color="#0b5394"> <a href="mailto:{{email}}" target="_blank" style="text-decoration: none; color: #0b5394;">{{email}}</a></font><br>
-            <b><font color="#3d85c6">w:</font></b><font color="#0b5394"> <a href="http://cirrusmd.com" target="_blank" style="text-decoration: none; color: #0b5394;">cirrusmd.com</a></font><br>&nbsp;
+            <font color="#17479D">{{title}}</font><br>
+            <b><font color="#89D2DC">p:</font></b><font color="#17479D"> {{phone}}</font><br>
+            <b><font color="#89D2DC">e:</font></b><font color="#17479D"> <a href="mailto:{{email}}" target="_blank" style="text-decoration: none; color: #0b5394;">{{email}}</a></font><br>
+            <b><font color="#89D2DC">w:</font></b><font color="#17479D"> <a href="http://cirrusmd.com" target="_blank" style="text-decoration: none; color: #0b5394;">cirrusmd.com</a></font><br>&nbsp;
         </div>
     </div>
 </div>`;
