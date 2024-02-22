@@ -39,9 +39,9 @@ function getUserNameByEmail(email) {
   }
 }
 
-function updateUserSignature(userEmail, userName, userTitle) {
+function updateUserSignature(userEmail, userName, userTitle, pronouns) {
   try {
-    var signatureHtml = generateSignatureHtml(userName, userTitle);
+    var signatureHtml = generateSignatureHtml(userName, userTitle, pronouns);
     Gmail.Users.Settings.sendAs.update({
       signature: signatureHtml
     }, userEmail, 'me');
