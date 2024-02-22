@@ -51,7 +51,7 @@ function updateUserSignature(userEmail, userName, userTitle) {
   }
 }
 
-function generateSignatureHtml(userName, userTitle) {
+function generateSignatureHtml(userName, userTitle, pronouns) {
   var htmlTemplate = `
 <div style="font-family: Arial, sans-serif; font-size: 14px; line-height: 1.4;">
 <div style="font-size: 20px;"><font color="#89D2DC">CirrusMD</font></div>
@@ -65,5 +65,5 @@ function generateSignatureHtml(userName, userTitle) {
         </div>
     </div>
 </div>`;
-  return htmlTemplate.replace('{{name}}', userName).replace('{{title}}', userTitle);
+    return htmlTemplate.replace('{{name}}', userName).replace('{{title}}', userTitle).replace('{{pronouns}}', pronouns);
 }
